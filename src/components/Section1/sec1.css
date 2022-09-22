@@ -1,0 +1,123 @@
+:root {
+    --light: #fff;
+    --dark:#000;
+}
+@font-face {
+    font-family: pop ;
+    src: url('../fonts/Poppins-Bold.ttf');
+}
+@font-face {
+    font-family: pop2 ;
+    src: url('../fonts/Poppins.ttf');
+}
+ body {
+    font-family: pop;
+ }
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.clouds {
+    position:absolute;
+    width: 1500px;
+    bottom: 400px;
+    right: -30px;
+    z-index: 21;
+}
+.mount {
+    position: absolute;
+    bottom: -300px;
+    right:-30px;
+    
+}
+.trees {
+    position: absolute;
+    width: 1400px;
+    left: 0;
+    bottom: -100px;
+    z-index: 50
+}
+.keyNav {
+    position: absolute;
+    width: 100%;
+    z-index: 30;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.05), transparent);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px
+}
+.mainNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    padding: 10px 30px;
+    color: var(--light);
+    text-transform: uppercase;
+    transition: .5s ease-in;
+    font-size:1.1em;
+}
+.header {
+    font-size: 2rem;
+    color: var(--light);
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+.header span {
+    color: var(--dark);
+}
+a.active {
+    color: var(--dark)
+}
+a:hover{
+    background: transparent;
+    color: var(--dark);
+}
+.big-header {
+    position:absolute;
+    z-index: 30;
+    top: calc(55% - 2em);
+    width: 100%;
+    text-align: center;
+    font-size: 7em;
+    color: var(--light);
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 769px) {
+    .big-header {
+        font-size: 4.5em;
+        top: calc(42% - 2em);
+    }
+  .keyNav{
+    flex-direction: column;
+  }
+  .header{
+    font-size: 1.3em;
+  }
+  a {
+    font-size: .9em;
+    padding: 10px 20px;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+
+  }
+}
+
