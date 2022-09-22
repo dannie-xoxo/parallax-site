@@ -33,7 +33,7 @@ import buddha from '../images/buddha.jpg';
             {{transform: `translateY(${offsetY / (offsetHeight + contY.top)* 50 -50}px)`,
              opacity:offsetY /(contY.top + offsetHeight)}} >
                 <h2 className='title'> About
-                <div className="border" ref={inner}  style={{width:`${offsetY / (contY.top + offsetHeight)* 15}%`}} ></div>
+                <div className="border" ref={inner}  style={{width:`${offsetY / (contY.top + offsetHeight)* 20}%`}} ></div>
                 </h2>
                 <p className='text'>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                  Sequi vitae quibusdam voluptatibus architecto. Porro officiis voluptates ratione 

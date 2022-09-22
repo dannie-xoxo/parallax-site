@@ -65,11 +65,11 @@ li {
 }
 a {
     text-decoration: none;
-    padding: 10px 30px;
+    padding: 20px 30px;
     color: var(--light);
     text-transform: uppercase;
     transition: .5s ease-in;
-    font-size:1.1em;
+    font-size:1em;
 }
 .header {
     font-size: 2rem;
@@ -99,25 +99,81 @@ a:hover{
     font-weight: bolder;
 }
 
+.toggler div {
+    width: 2.2em;
+    height: .2em;
+    margin: .3em;
+    background: var(--dark);
+    transition: 0.4s ease-in;
+ } 
+ 
+ .toggler {
+    margin-top: 0px;
+    display: none;
+    cursor: pointer;
+ }
+
 @media screen and (max-width: 769px) {
+
+    .toggler {
+        display: block;
+    }
+    
+    .mainNav {
+        position: fixed;
+        top: 5vh;
+        right: 0;
+        width: 40%;
+        height: 50%;
+        opacity: .5;
+        flex-direction:column;
+        transform: translateX(120%);
+        transition: 0.5s ease-in; 
+        margin: 10px 0;
+        padding: 0;
+    }
+  
     .big-header {
         font-size: 4.5em;
-        top: calc(42% - 2em);
+        top: calc(50% - 2em);
     }
-  .keyNav{
-    flex-direction: column;
-  }
   .header{
-    font-size: 1.3em;
+    font-size: 1.5em;
+    letter-spacing: normal;
   }
   a {
     font-size: .9em;
-    padding: 10px 20px;
+    padding: 10px;
+
   }
   .container{
     display: flex;
     flex-direction: column;
+    align-items: center;
 
   }
+  .clouds {
+    width: 1200px;
+}
+.trees {
+    width: 1000px;   
+}
+/* Nav Active Class */
+.nav-active {
+    transform: translateX(0);
+    position: absolute;   
+ }
+ 
+ /* Hamburger Icon Animation */
+ .toggle .line1 {
+    transform: rotate(-45deg) translate(-7px, 5px);
+ }
+ .toggle .line2 {
+    opacity: 0;
+ }
+ .toggle .line3 {
+    transform: rotate(45deg) translate(-7px, -5px);
+ }
+ 
 }
 

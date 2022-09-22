@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3em;
+    padding: 2em;
     gap: 15px;
     position: relative;
 }
@@ -50,6 +50,7 @@
     z-index: 51;
     background: linear-gradient(to top, rgb(23, 43, 53), transparent);
 }
+
 
 @media  screen and (max-width: 769px) {
     .container2 {
