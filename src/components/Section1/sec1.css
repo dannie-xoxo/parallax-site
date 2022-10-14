@@ -66,7 +66,7 @@ li {
 a {
     text-decoration: none;
     padding: 20px 30px;
-    color: var(--light);
+    color: var(--dark);
     text-transform: uppercase;
     transition: .5s ease-in;
     font-size: 1em;
@@ -82,11 +82,11 @@ a {
     color: var(--dark);
 }
 a.active {
-    color: var(--dark)
+    text-decoration: underline 3px solid var(--dark);
 }
 .mainNav a:hover{
-    background: transparent;
-    color: var(--dark);
+    text-decoration: underline 3px solid var(--dark);
+    
 }
 .big-header {
     position:absolute;
@@ -121,16 +121,18 @@ a.active {
     
     .mainNav {
         position: fixed;
-        top: 5vh;
+        top: 8vh;
         right: 0;
-        width: 40%;
-        height: 50%;
-        opacity: .4;
+        width: 40vw;
+        height: 40vw;
+        opacity: .7;
+        background-color: transparent;
         flex-direction:column;
         transform: translateX(120%);
         transition: 0.5s ease-in; 
-        margin: 10px 0;
-        padding: 0;
+        margin: 5px 0;
+        padding: 20px;
+        
     }
   
     .big-header {
@@ -158,10 +160,13 @@ a.active {
 .trees {
     width: 1000px;   
 }
+
+}
 /* Nav Active Class */
 .nav-active {
     transform: translateX(0);
-    position: absolute;   
+    position: absolute; 
+    z-index: 1000;  
  }
  
  /* Hamburger Icon Animation */
@@ -175,5 +180,4 @@ a.active {
     transform: rotate(45deg) translate(-7px, -5px);
  }
  
-}
 
